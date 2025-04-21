@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -22,18 +21,18 @@ const ExamDates = () => {
         {
           id: 1,
           name: "April - Intake 1",
-          date: new Date(2025,3 ,26 ),
+          date: new Date(2025, 3, 26),
           time: "11:00 AM - 1:00 PM",
           type: "Online",
-          deadline: new Date(2025,3,24)
+          deadline: new Date(2025, 3, 24)
         },
         {
           id: 2,
           name: "April - Intake 2",
-          date: new Date(2025,3,27),
+          date: new Date(2025, 3, 27),
           time: "11:00 AM - 1:00 PM",
           type: "Online",
-          deadline: new Date(2025,3,24)
+          deadline: new Date(2025, 3, 24)
         },
       ];
     } else if (monthOffset === 1) {
@@ -41,10 +40,10 @@ const ExamDates = () => {
         {
           id: 3,
           name: "May Intake-1",
-          date: new Date(2025,4, 25),
+          date: new Date(2025, 4, 23),
           time: "11:00 AM - 1:00 PM",
-          type:"Online",
-          deadline: new Date(2025,4, 23)
+          type: "Online",
+          deadline: new Date(2025, 4, 23)
         }
       ];
     } else {
@@ -133,12 +132,19 @@ const ExamDates = () => {
                             <Clock className="h-4 w-4 mr-2 text-gray-500" />
                             <span>{exam.time}</span>
                           </div>
-                          <div className="mt-4 p-3 bg-primary/10 rounded-md flex items-start">
-                            <AlertCircle className="h-4 w-4 mr-2 text-primary mt-0.5" />
-                            <div>
-                              <p className="text-sm font-medium">Important </p>
+                          <div className="mt-4 p-3 bg-primary/10 rounded-md flex items-start justify-between">
+                            <div className="flex flex-col">
+                              <p className="text-sm font-medium">Important</p>
                               <p className="text-xs text-gray-600">Deadline: <span>{formatDate(exam.deadline)}</span></p>
-                              </div>
+                            </div>
+                            <a 
+                              href="https://www.scaler.com/school-of-technology/application/?utm_source=SST_student_referral" 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="mt-2 md:mt-0 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/80"
+                            >
+                              Apply Now
+                            </a>
                           </div>
                         </div>
                         
@@ -187,7 +193,7 @@ const ExamDates = () => {
         <div className="container px-4">
           <div className="text-center">
             <h3 className="font-bold text-primary">appt.ppl</h3>
-            <p className="text-sm text-gray-500 mt-1">Helping students crack Scaler NSET  .</p>
+            <p className="text-sm text-gray-500 mt-1">Helping students crack Scaler NSET.</p>
             <p className="text-xs text-gray-400 mt-4">© {new Date().getFullYear()} appt.ppl. All rights reserved.</p>
           </div>
         </div>
