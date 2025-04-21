@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, MapPin, AlertCircle } from "lucide-react";
+import { Calendar, Clock, Linkedin} from "lucide-react";
 
 const ExamDates = () => {
   const currentDate = new Date();
@@ -194,6 +194,39 @@ const ExamDates = () => {
           <div className="text-center">
             <h3 className="font-bold text-primary">appt.ppl</h3>
             <p className="text-sm text-gray-500 mt-1">Helping students crack Scaler NSET.</p>
+            {/* Contributors Box */}
+      <div className="mt-6 mx-auto max-w-md bg-muted rounded-2xl p-4 shadow-md">
+        <h4 className="text-md font-semibold text-foreground mb-2">Connect with Contributors</h4>
+        <div className="flex flex-col gap-3 items-start text-base">
+          
+          <a
+            href="https://www.linkedin.com/in/praneeth-budati-257391326/?originalSubdomain=in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-primary hover:underline"
+          >
+            <Linkedin size={18} /> Praneeth Budati
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/pranay-reddy-a3015a333/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-primary hover:underline"
+          >
+            <Linkedin size={18} /> Pranay Reddy
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ananthadattaeranti/?originalSubdomain=in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-primary hover:underline"
+          >
+            <Linkedin size={18} /> Anantha
+          </a>
+        </div>
+      </div>
             <p className="text-xs text-gray-400 mt-4">© {new Date().getFullYear()} appt.ppl. All rights reserved.</p>
           </div>
         </div>

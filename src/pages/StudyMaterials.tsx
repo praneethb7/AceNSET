@@ -20,6 +20,8 @@ import {
   Video,
   PenTool,
   Link as LinkIcon,
+  AlertTriangle,
+  Linkedin
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -27,30 +29,30 @@ import { Link } from "react-router-dom";
 const syllabusData = {
   "Logical Reasoning": [
     { topic: "Series, Blood Relations, Family Tree", questions: 5, weightage: "16%", difficulty: "Moderate" },
-    { topic: "Simple & Compound Interest",    questions: 2, weightage: "6%",  difficulty: "Easy" },
-    { topic: "Direction Sense",               questions: 2, weightage: "6%",  difficulty: "Easy to Moderate" },
-    { topic: "Puzzles",                      questions: 5, weightage: "16%", difficulty: "Moderate to Hard" },
-    { topic: "Seating Arrangement",          questions: 4, weightage: "13%", difficulty: "Moderate to Hard" },
-    { topic: "Venn Diagram",                  questions: 2, weightage: "6%",  difficulty: "Easy" },
-    { topic: "Data Sufficiency",              questions: 2, weightage: "6%",  difficulty: "Moderate" },
-    { topic: "Pie Charts",                   questions: 1, weightage: "3%",  difficulty: "Easy" },
-    { topic: "Bar and Line Graphs",           questions: 1, weightage: "3%",  difficulty: "Easy" },
-    { topic: "Coding-Decoding",               questions: 2, weightage: "6%",  difficulty: "Easy to Moderate" },
-    { topic: "Sets and Caselets",             questions: 1, weightage: "3%",  difficulty: "Moderate" },
-    { topic: "Clocks and Calendars",          questions: 1, weightage: "3%",  difficulty: "Moderate" },
-    { topic: "Syllogism",                    questions: 1, weightage: "3%",  difficulty: "Easy" },
-    { topic: "Percentages",                  questions: 1, weightage: "3%",  difficulty: "Easy" },
-    { topic: "Profit and Loss",               questions: 1, weightage: "3%",  difficulty: "Easy" },
-    { topic: "Speed, Time and Distance",     questions: 1, weightage: "3%",  difficulty: "Easy to Moderate" },
-    { topic: "Work and Time",                 questions: 1, weightage: "3%",  difficulty: "Easy" },
+    { topic: "Simple & Compound Interest", questions: 2, weightage: "6%", difficulty: "Easy" },
+    { topic: "Direction Sense", questions: 2, weightage: "6%", difficulty: "Easy to Moderate" },
+    { topic: "Puzzles", questions: 5, weightage: "16%", difficulty: "Moderate to Hard" },
+    { topic: "Seating Arrangement", questions: 4, weightage: "13%", difficulty: "Moderate to Hard" },
+    { topic: "Venn Diagram", questions: 2, weightage: "6%", difficulty: "Easy" },
+    { topic: "Data Sufficiency", questions: 2, weightage: "6%", difficulty: "Moderate" },
+    { topic: "Pie Charts", questions: 1, weightage: "3%", difficulty: "Easy" },
+    { topic: "Bar and Line Graphs", questions: 1, weightage: "3%", difficulty: "Easy" },
+    { topic: "Coding-Decoding", questions: 2, weightage: "6%", difficulty: "Easy to Moderate" },
+    { topic: "Sets and Caselets", questions: 1, weightage: "3%", difficulty: "Moderate" },
+    { topic: "Clocks and Calendars", questions: 1, weightage: "3%", difficulty: "Moderate" },
+    { topic: "Syllogism", questions: 1, weightage: "3%", difficulty: "Easy" },
+    { topic: "Percentages", questions: 1, weightage: "3%", difficulty: "Easy" },
+    { topic: "Profit and Loss", questions: 1, weightage: "3%", difficulty: "Easy" },
+    { topic: "Speed, Time and Distance", questions: 1, weightage: "3%", difficulty: "Easy to Moderate" },
+    { topic: "Work and Time", questions: 1, weightage: "3%", difficulty: "Easy" },
   ],
   Mathematics: [
-    { topic: "Number Theory",               questions: 5, weightage: "26%", difficulty: "Moderate to Hard" },
+    { topic: "Number Theory", questions: 5, weightage: "26%", difficulty: "Moderate to Hard" },
     { topic: "Exponentials and Logarithms", questions: 2, weightage: "11%", difficulty: "Easy to Moderate" },
-    { topic: "Probability and Statistics",  questions: 4, weightage: "21%", difficulty: "Easy to Moderate" },
-    { topic: "Permutation and Combinations",questions: 3, weightage: "16%", difficulty: "Easy to Difficult" },
-    { topic: "Ratio and Proportion",        questions: 3, weightage: "16%", difficulty: "Easy" },
-    { topic: "Sets (Venn Diagrams)",        questions: 3, weightage: "16%", difficulty: "Moderate" },
+    { topic: "Probability and Statistics", questions: 4, weightage: "21%", difficulty: "Easy to Moderate" },
+    { topic: "Permutation and Combinations", questions: 3, weightage: "16%", difficulty: "Easy to Difficult" },
+    { topic: "Ratio and Proportion", questions: 3, weightage: "16%", difficulty: "Easy" },
+    { topic: "Sets (Venn Diagrams)", questions: 3, weightage: "16%", difficulty: "Moderate" },
   ],
 };
 
@@ -192,7 +194,7 @@ const StudyMaterials = () => {
         url: "https://drive.google.com/file/d/1bremw10gtJ7XL9xJMu_L20IFf_ZWXHH6/view?usp=sharing",
       },
     ],
-  };  
+  };
 
   // filter function for search (applicable to textbooks, videos, practice)
   const filteredMaterials = (type) =>
@@ -207,7 +209,7 @@ const StudyMaterials = () => {
     switch (type) {
       case "PDF": return <FileText className="h-4 w-4" />;
       case "Video": return <Video className="h-4 w-4" />;
-      default:     return <FileText className="h-4 w-4" />;
+      default: return <FileText className="h-4 w-4" />;
     }
   };
 
@@ -320,6 +322,19 @@ const StudyMaterials = () => {
                 </div>
               ))}
             </div>
+            <div className="bg-accent/50 p-4 rounded-md border border-accent mt-4">
+                      <div className="flex items-start">
+                        <AlertTriangle className="h-5 w-5 text-amber-500 mt-0.5 mr-2 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-medium">Important Note</h4>
+                          <p className="text-sm text-muted-foreground mt-1">
+                          Please note: This topic-wise analysis is intended solely for reference purposes. 
+                          While we strive for accuracy, the actual exam pattern may vary. 
+                          We recommend verifying with official sources before relying on this information.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
           </TabsContent>
 
           {/* Videos Tab */}
@@ -409,6 +424,39 @@ const StudyMaterials = () => {
             <p className="text-sm text-muted-foreground mt-1">
               Helping students crack Scaler NSET.
             </p>
+            {/* Contributors Box */}
+            <div className="mt-6 mx-auto max-w-md bg-muted rounded-2xl p-4 shadow-md">
+              <h4 className="text-md font-semibold text-foreground mb-2">Connect with Contributors</h4>
+              <div className="flex flex-col gap-3 items-start text-base">
+
+                <a
+                  href="https://www.linkedin.com/in/praneeth-budati-257391326/?originalSubdomain=in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Linkedin size={18} /> Praneeth Budati
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/pranay-reddy-a3015a333/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Linkedin size={18} /> Pranay Reddy
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/ananthadattaeranti/?originalSubdomain=in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Linkedin size={18} /> Anantha
+                </a>
+              </div>
+            </div>
             <p className="text-xs text-muted-foreground/70 mt-4">
               © {new Date().getFullYear()} appt.ppl. All rights reserved.
             </p>
