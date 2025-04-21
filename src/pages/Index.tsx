@@ -1,4 +1,4 @@
-import { Linkedin } from "lucide-react";
+import { Linkedin, Youtube } from "lucide-react";
 import { Book, Clock, LineChart, Download, Trophy } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -38,7 +38,7 @@ const Index = () => {
               title="YouTube Channel"
               value="appt.ppl"
               subtitle="Watch strategy and prep videos"
-              icon={<Trophy className="h-4 w-4 text-primary" />}
+              icon={<Youtube className="h-4 w-4 text-primary" />}
               buttonText="Visit Channel"
               buttonLink="https://youtube.com/@appt_ppl?si=heubvM44FGHU-kkL"
             />
