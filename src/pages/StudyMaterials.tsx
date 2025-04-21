@@ -240,7 +240,7 @@ const StudyMaterials = () => {
             </TabsTrigger>
             <TabsTrigger value="syllabus" className="flex items-center gap-2">
               <PenTool className="h-4 w-4" />
-              <span className="hidden sm:inline">Syllabus</span>
+              <span className="hidden sm:inline">Topic Wise Weightage</span>
             </TabsTrigger>
             <TabsTrigger value="videos" className="flex items-center gap-2">
               <Video className="h-4 w-4" />
@@ -407,7 +407,7 @@ const StudyMaterials = () => {
           <div className="text-center">
             <h3 className="font-bold text-primary">appt.ppl</h3>
             <p className="text-sm text-muted-foreground mt-1">
-              Helping students crack scaler NSET.
+              Helping students crack Scaler NSET.
             </p>
             <p className="text-xs text-muted-foreground/70 mt-4">
               © {new Date().getFullYear()} appt.ppl. All rights reserved.
