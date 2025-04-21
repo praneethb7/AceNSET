@@ -11,7 +11,7 @@ const Index = () => {
       <Navbar />
       <main className="container px-4 py-8">
         {/* Hero Section */}
-        <Hero 
+        <Hero
           title="Student Prep Kit Portal"
           subtitle="Excel in Your Exams"
           ctaText="Explore Materials"
@@ -22,31 +22,33 @@ const Index = () => {
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-6">Key Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <StatsCard 
-              title="Study Materials" 
+            <StatsCard
+              title="Study Materials"
               value="10+"
-              subtitle="Including PDFs, videos, and notes" 
-              icon={<Book className="h-4 w-4 text-primary" />} 
+              subtitle="Including PDFs, videos, and notes"
+              icon={<Book className="h-4 w-4 text-primary" />}
             />
-            <StatsCard 
-              title="Upcoming Intakes" 
+            <StatsCard
+              title="Upcoming Intakes"
               value="4"
-              subtitle="Scheduled till July" 
-              icon={<Clock className="h-4 w-4 text-primary" />} 
+              subtitle="Scheduled till July"
+              icon={<Clock className="h-4 w-4 text-primary" />}
             />
-            <StatsCard 
-              title="na" 
-              value="na"
-              subtitle="na" 
+            <StatsCard
+              title="YouTube Channel"
+              value="appt.ppl"
+              subtitle="Watch strategy and prep videos"
               icon={<Trophy className="h-4 w-4 text-primary" />}
+              buttonText="Visit Channel"
+              buttonLink="https://youtube.com/@appt_ppl?si=heubvM44FGHU-kkL"
             />
-            <StatsCard 
-              title="na" 
-              value="na"
-              subtitle="na" 
+            <StatsCard
+              title="Downloads"
+              value="TBD"
+              subtitle="Guides and resources in one place"
               icon={<Download className="h-4 w-4 text-primary" />}
-
             />
+
           </div>
         </div>
 
@@ -54,22 +56,22 @@ const Index = () => {
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-6">Prepare Effectively</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <FeaturedCard 
-              title="Study Materials" 
+            <FeaturedCard
+              title="Study Materials"
               description="Access comprehensive study materials including notes, textbooks, videos, and practice tests."
               icon={<Book className="h-5 w-5 text-primary" />}
               linkTo="/study-materials"
               badgeText="10+"
             />
-            <FeaturedCard 
-              title="Exam Schedule" 
+            <FeaturedCard
+              title="Exam Schedule"
               description="Keep track of upcoming exams, their dates, timings, and important instructions."
               icon={<Clock className="h-5 w-5 text-primary" />}
               linkTo="/exam-dates"
               badgeText="Updated"
             />
-            <FeaturedCard 
-              title="Previous Cutoffs" 
+            <FeaturedCard
+              title="Previous Cutoffs"
               description="Analyze previous months' cutoffs to understand the competition and set realistic goals."
               icon={<LineChart className="h-5 w-5 text-primary" />}
               linkTo="/cutoffs"
@@ -127,7 +129,7 @@ const Index = () => {
         <div className="container px-4">
           <div className="text-center">
             <h3 className="font-bold text-primary">appt.ppl</h3>
-            <p className="text-sm text-gray-500 mt-1">Helping students crack scaler NSET.</p>
+            <p className="text-sm text-gray-500 mt-1">Helping students crack Scaler NSET.</p>
             <p className="text-xs text-gray-400 mt-4">© {new Date().getFullYear()} appt.ppl. All rights reserved.</p>
           </div>
         </div>

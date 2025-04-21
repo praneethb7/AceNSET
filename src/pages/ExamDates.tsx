@@ -187,7 +187,7 @@ const ExamDates = () => {
         <div className="container px-4">
           <div className="text-center">
             <h3 className="font-bold text-primary">appt.ppl</h3>
-            <p className="text-sm text-gray-500 mt-1">Helping students crack scaler NSET  .</p>
+            <p className="text-sm text-gray-500 mt-1">Helping students crack Scaler NSET  .</p>
             <p className="text-xs text-gray-400 mt-4">© {new Date().getFullYear()} appt.ppl. All rights reserved.</p>
           </div>
         </div>

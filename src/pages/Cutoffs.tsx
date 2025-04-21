@@ -169,7 +169,7 @@ const Cutoffs = () => {
         <div className="container px-4">
           <div className="text-center">
             <h3 className="font-bold text-primary">appt.ppl</h3>
-            <p className="text-sm text-muted-foreground mt-1">Helping students crack scaler NSET.</p>
+            <p className="text-sm text-muted-foreground mt-1">Helping students crack Scaler NSET.</p>
             <p className="text-xs text-muted-foreground/70 mt-4">© {new Date().getFullYear()} appt.ppl. All rights reserved.</p>
           </div>
         </div>

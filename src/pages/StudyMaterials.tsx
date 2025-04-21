@@ -93,10 +93,10 @@ const StudyMaterials = () => {
         title: "Probability",
         subject: "Mathematics",
         description:
-          "Video series explaining differential and integral calculus",
+          "Video series explaining probability",
         type: "Video",
         duration: "4h 32m",
-        url: "https://example.com/calculus-videos",
+        url: "https://www.youtube.com/watch?v=sYTW-mvxcOk",
       },
       {
         id: 2,

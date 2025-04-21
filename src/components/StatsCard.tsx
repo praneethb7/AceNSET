@@ -1,5 +1,5 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button"; // import Button
 
 interface StatsCardProps {
   title: string;
@@ -10,9 +10,11 @@ interface StatsCardProps {
     value: number;
     isPositive: boolean;
   };
+  buttonText?: string;
+  buttonLink?: string;
 }
 
-const StatsCard = ({ title, value, subtitle, icon, trend }: StatsCardProps) => {
+const StatsCard = ({ title, value, subtitle, icon, trend, buttonText, buttonLink }: StatsCardProps) => {
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -25,6 +27,13 @@ const StatsCard = ({ title, value, subtitle, icon, trend }: StatsCardProps) => {
         {trend && (
           <div className="flex items-center mt-2">
             <span className="text-xs text-muted-foreground ml-1">from last month</span>
+          </div>
+        )}
+        {buttonText && buttonLink && (
+          <div className="mt-4">
+            <a href={buttonLink} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm">{buttonText}</Button>
+            </a>
           </div>
         )}
       </CardContent>
