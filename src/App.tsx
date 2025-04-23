@@ -26,7 +26,6 @@ const App = () => (
           <Route path="/study-materials" element={<StudyMaterials />} />
           <Route path="/exam-dates" element={<ExamDates />} />
           <Route path="/cutoffs" element={<Cutoffs />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
