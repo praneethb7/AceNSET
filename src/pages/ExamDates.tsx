@@ -1,21 +1,31 @@
 import Navbar from "@/components/Navbar";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, Linkedin} from "lucide-react";
+import { Calendar, Clock, Linkedin } from "lucide-react";
 
 const ExamDates = () => {
   const currentDate = new Date();
   const currentMonth = currentDate.getMonth();
   const currentYear = currentDate.getFullYear();
-  
+
   const createExamData = (monthOffset: number) => {
     const targetMonth = new Date(currentYear, currentMonth + monthOffset, 1);
-    const monthName = targetMonth.toLocaleString('default', { month: 'long' });
+    const monthName = targetMonth.toLocaleString("default", { month: "long" });
     const year = targetMonth.getFullYear();
-    
+
     let exams = [];
-    
+
     if (monthOffset === 0) {
       exams = [
         {
@@ -24,7 +34,7 @@ const ExamDates = () => {
           date: new Date(2025, 3, 26),
           time: "11:00 AM - 1:00 PM",
           type: "Online",
-          deadline: new Date(2025, 3, 24)
+          deadline: new Date(2025, 3, 24),
         },
         {
           id: 2,
@@ -32,47 +42,65 @@ const ExamDates = () => {
           date: new Date(2025, 3, 27),
           time: "11:00 AM - 1:00 PM",
           type: "Online",
-          deadline: new Date(2025, 3, 24)
+          deadline: new Date(2025, 3, 24),
         },
       ];
     } else if (monthOffset === 1) {
       exams = [
         {
           id: 3,
-          name: "May Intake-1",
+          name: "May - Intake 1",
           date: new Date(2025, 4, 23),
           time: "11:00 AM - 1:00 PM",
           type: "Online",
-          deadline: new Date(2025, 4, 23)
-        }
+          deadline: new Date(2025, 4, 23),
+        },
+        {
+          id: 4,
+          name: "May - Intake 2",
+          date: new Date(2025, 4, 24),
+          time: "11:00 AM - 1:00 PM",
+          type: "Online",
+          deadline: new Date(2025, 4, 22),
+        },
       ];
-    } else {
-          
+    } else if (monthOffset === 2) {
+      exams = [
+        {
+          id: 5,
+          name: "June - Intake 1",
+          date: new Date(2025, 5, 14),
+          time: "11:00 AM - 1:00 PM",
+          type: "Online",
+          deadline: new Date(2025, 5, 12),
+          comingSoon: true,
+        },
+      ];
     }
-    
+
     return {
       month: monthName,
       year: year,
-      exams: exams
+      exams: exams,
     };
   };
-  
+
   const examSchedule = [
-    createExamData(0), // Current month
-    createExamData(1), // Next month
-    createExamData(2),  // Month after next
-    createExamData(3)
+    createExamData(0),
+    createExamData(1),
+    createExamData(2),
+    createExamData(3),
   ];
-  
-  const formatDate = (dateString: string) => {
+
+  const formatDate = (dateString: string | Date) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      day: 'numeric',
-      month: 'short', 
-      year: 'numeric'
+    return date.toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
     });
   };
-  
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -81,12 +109,12 @@ const ExamDates = () => {
         <p className="text-gray-600 mb-6">
           Keep track of all upcoming exams and prepare accordingly.
         </p>
-        
+
         <Tabs defaultValue={examSchedule[0].month.toLowerCase()}>
           <TabsList className="mb-6">
             {examSchedule.map((schedule) => (
-              <TabsTrigger 
-                key={schedule.month} 
+              <TabsTrigger
+                key={schedule.month}
                 value={schedule.month.toLowerCase()}
                 className="px-6"
               >
@@ -94,7 +122,7 @@ const ExamDates = () => {
               </TabsTrigger>
             ))}
           </TabsList>
-          
+
           {examSchedule.map((schedule) => (
             <TabsContent key={schedule.month} value={schedule.month.toLowerCase()}>
               <div className="mb-4">
@@ -103,7 +131,7 @@ const ExamDates = () => {
                   {schedule.month} {schedule.year}
                 </h2>
               </div>
-              
+
               {schedule.exams.length === 0 ? (
                 <Card>
                   <CardContent className="py-10 text-center">
@@ -135,19 +163,26 @@ const ExamDates = () => {
                           <div className="mt-4 p-3 bg-primary/10 rounded-md flex items-start justify-between">
                             <div className="flex flex-col">
                               <p className="text-sm font-medium">Important</p>
-                              <p className="text-xs text-gray-600">Deadline: <span>{formatDate(exam.deadline)}</span></p>
+                              <p className="text-xs text-gray-600">
+                                Deadline: <span>{formatDate(exam.deadline)}</span>
+                              </p>
                             </div>
-                            <a 
-                              href="https://www.scaler.com/school-of-technology/application/?utm_source=SST_student_referral" 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="mt-2 md:mt-0 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/80"
-                            >
-                              Apply Now
-                            </a>
+                            {!exam.comingSoon ? (
+                              <a
+                                href="https://www.scaler.com/school-of-technology/application/?utm_source=SST_student_referral"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-2 md:mt-0 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/80"
+                              >
+                                Apply Now
+                              </a>
+                            ) : (
+                              <span className="mt-2 md:mt-0 px-4 py-2 bg-muted text-gray-600 rounded-lg">
+                                Coming Soon
+                              </span>
+                            )}
                           </div>
                         </div>
-                        
                       </CardContent>
                     </Card>
                   ))}
@@ -156,7 +191,7 @@ const ExamDates = () => {
             </TabsContent>
           ))}
         </Tabs>
-        
+
         <div className="bg-white p-6 mt-8 rounded-lg shadow-sm">
           <h3 className="text-lg font-bold mb-4">Exam Guidelines</h3>
           <ul className="space-y-3 text-sm">
@@ -164,7 +199,7 @@ const ExamDates = () => {
               <span className="inline-flex items-center justify-center rounded-full bg-primary/10 p-1 mr-2">
                 <span className="text-xs font-medium text-primary">1</span>
               </span>
-              <span>Attempt the mock test beforehand..</span>
+              <span>Attempt the mock test beforehand.</span>
             </li>
             <li className="flex items-start">
               <span className="inline-flex items-center justify-center rounded-full bg-primary/10 p-1 mr-2">
@@ -187,47 +222,48 @@ const ExamDates = () => {
           </ul>
         </div>
       </main>
-      
-      {/* Footer */}
+
       <footer className="bg-white border-t mt-16 py-6">
         <div className="container px-4">
           <div className="text-center">
             <h3 className="font-bold text-primary">appt.ppl</h3>
-            <p className="text-sm text-gray-500 mt-1">Helping students crack Scaler NSET.</p>
-            {/* Contributors Box */}
-      <div className="mt-6 mx-auto max-w-md bg-muted rounded-2xl p-4 shadow-md">
-        <h4 className="text-md font-semibold text-foreground mb-2">Connect with Contributors</h4>
-        <div className="flex flex-col gap-3 items-start text-base">
-          
-          <a
-            href="https://www.linkedin.com/in/praneeth-budati-257391326/?originalSubdomain=in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-primary hover:underline"
-          >
-            <Linkedin size={18} /> Praneeth Budati
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/pranay-reddy-a3015a333/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-primary hover:underline"
-          >
-            <Linkedin size={18} /> Pranay Reddy
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/ananthadattaeranti/?originalSubdomain=in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-primary hover:underline"
-          >
-            <Linkedin size={18} /> Anantha
-          </a>
-        </div>
-      </div>
-            <p className="text-xs text-gray-400 mt-4">© {new Date().getFullYear()} appt.ppl. All rights reserved.</p>
+            <p className="text-sm text-gray-500 mt-1">
+              Helping students crack Scaler NSET.
+            </p>
+            <div className="mt-6 mx-auto max-w-md bg-muted rounded-2xl p-4 shadow-md">
+              <h4 className="text-md font-semibold text-foreground mb-2">
+                Connect with Contributors
+              </h4>
+              <div className="flex flex-col gap-3 items-start text-base">
+                <a
+                  href="https://www.linkedin.com/in/praneeth-budati-257391326/?originalSubdomain=in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Linkedin size={18} /> Praneeth Budati
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/pranay-reddy-a3015a333/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Linkedin size={18} /> Pranay Reddy
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ananthadattaeranti/?originalSubdomain=in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Linkedin size={18} /> Anantha
+                </a>
+              </div>
+            </div>
+            <p className="text-xs text-gray-400 mt-4">
+              © {new Date().getFullYear()} appt.ppl. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
