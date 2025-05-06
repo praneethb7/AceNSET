@@ -34,13 +34,13 @@ const Cutoffs = () => {
       trend: "up",
       change: 3.2
     },
-    "April": {
-      score: "37%",
-      trend: "down",
+    "April 26": {
+      score: "53-54%",
+      trend: "up",
       change: 1.8
     },
-    "May": {
-      score: "39%",
+    "April 27": {
+      score: "44-46%",
       trend: "up",
       change: 2.4
     },
@@ -71,7 +71,7 @@ const Cutoffs = () => {
   };
 
   // Define the months to show
-  const months = ["January", "February", "March"];
+  const months = ["January", "February", "March","April 26","April 27"];
 
   return (
     <div className="min-h-screen bg-background">
