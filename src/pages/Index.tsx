@@ -35,12 +35,12 @@ const Index = () => {
               icon={<Clock className="h-4 w-4 text-primary" />}
             />
             <StatsCard
-              title="YouTube Channel"
-              value="appt.ppl"
-              subtitle="Watch strategy and prep videos"
+              title="NA"
+              value="NA"
+              subtitle="NA"
               icon={<Youtube className="h-4 w-4 text-primary" />}
-              buttonText="Visit Channel"
-              buttonLink="https://youtube.com/@appt_ppl?si=heubvM44FGHU-kkL"
+              buttonText="Visit"
+              buttonLink=""
             />
             <StatsCard
               title="Downloads"
