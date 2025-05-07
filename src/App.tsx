@@ -12,7 +12,7 @@ import NotFound from "./pages/NotFound";
 import { ThemeProvider } from './context/ThemeContext';
 
 // Set the document title
-document.title = "appt.ppl - Student Prep Kit Portal";
+document.title = "Ace NSET - One Stop Destination";
 
 const queryClient = new QueryClient();
 
