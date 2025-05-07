@@ -163,7 +163,7 @@ const ExamDates = () => {
                           <div className="mt-4 p-3 bg-primary/10 rounded-md flex items-start justify-between">
                             <div className="flex flex-col">
                               <p className="text-sm font-medium">Important</p>
-                              <p className="text-xs text-gray-600">
+                              <p className="text-sm text-muted-foreground mt-1">
                                 Deadline: <span>{formatDate(exam.deadline)}</span>
                               </p>
                             </div>
@@ -172,14 +172,15 @@ const ExamDates = () => {
                                 href="https://www.scaler.com/school-of-technology/application/?utm_source=SST_student_referral"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mt-2 md:mt-0 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/80"
+                                className="mt-2 md:mt-0 px-4 py-2 rounded-lg text-sm font-medium bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200"
                               >
                                 Apply Now
                               </a>
                             ) : (
-                              <span className="mt-2 md:mt-0 px-4 py-2 bg-muted text-gray-600 rounded-lg">
+                              <span className="mt-2 md:mt-0 px-4 py-2 bg-muted text-gray-600 dark:text-gray-300 rounded-lg">
                                 Coming Soon
                               </span>
+
                             )}
                           </div>
                         </div>
@@ -192,7 +193,7 @@ const ExamDates = () => {
           ))}
         </Tabs>
 
-        <div className="bg-white p-6 mt-8 rounded-lg shadow-sm">
+        <div className="bg-accent/50 p-4 rounded-md border border-accent mt-4">
           <h3 className="text-lg font-bold mb-4">Exam Guidelines</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-start">
@@ -223,18 +224,18 @@ const ExamDates = () => {
         </div>
       </main>
 
-      <footer className="bg-white border-t mt-16 py-6">
+      <footer className="bg-card border-t mt-16 py-6">
         <div className="container px-4">
           <div className="text-center">
-            <h3 className="font-bold text-primary">appt.ppl</h3>
-            <p className="text-sm text-gray-500 mt-1">
+            <h3 className="font-bold text-primary">Ace NSET</h3>
+            <p className="text-sm text-muted-foreground mt-1">
               Helping students crack Scaler NSET.
             </p>
+            {/* Contributors Box */}
             <div className="mt-6 mx-auto max-w-md bg-muted rounded-2xl p-4 shadow-md">
-              <h4 className="text-md font-semibold text-foreground mb-2">
-                Connect with Contributors
-              </h4>
+              <h4 className="text-md font-semibold text-foreground mb-2">Connect with Contributors</h4>
               <div className="flex flex-col gap-3 items-start text-base">
+
                 <a
                   href="https://www.linkedin.com/in/praneeth-budati-257391326/?originalSubdomain=in"
                   target="_blank"
@@ -243,6 +244,7 @@ const ExamDates = () => {
                 >
                   <Linkedin size={18} /> Praneeth Budati
                 </a>
+
                 <a
                   href="https://www.linkedin.com/in/pranay-reddy-a3015a333/"
                   target="_blank"
@@ -251,6 +253,7 @@ const ExamDates = () => {
                 >
                   <Linkedin size={18} /> Pranay Reddy
                 </a>
+
                 <a
                   href="https://www.linkedin.com/in/ananthadattaeranti/?originalSubdomain=in"
                   target="_blank"
@@ -261,8 +264,8 @@ const ExamDates = () => {
                 </a>
               </div>
             </div>
-            <p className="text-xs text-gray-400 mt-4">
-              © {new Date().getFullYear()} appt.ppl. All rights reserved.
+            <p className="text-xs text-muted-foreground/70 mt-4">
+              © {new Date().getFullYear()} Ace NSET. All rights reserved.
             </p>
           </div>
         </div>

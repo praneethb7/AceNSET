@@ -167,7 +167,7 @@ const Cutoffs = () => {
 <footer className="bg-card border-t mt-16 py-6">
   <div className="container px-4">
     <div className="text-center">
-      <h3 className="font-bold text-primary text-lg">appt.ppl</h3>
+      <h3 className="font-bold text-primary text-lg">Ace NSET</h3>
       <p className="text-base text-muted-foreground mt-1">
         Helping students crack Scaler NSET.
       </p>
@@ -207,7 +207,7 @@ const Cutoffs = () => {
       </div>
 
       <p className="text-xs text-muted-foreground/70 mt-6">
-        © {new Date().getFullYear()} appt.ppl. All rights reserved.
+        © {new Date().getFullYear()} Ace NSET. All rights reserved.
       </p>
     </div>
   </div>

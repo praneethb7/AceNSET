@@ -9,6 +9,7 @@ import StudyMaterials from "./pages/StudyMaterials";
 import ExamDates from "./pages/ExamDates";
 import Cutoffs from "./pages/Cutoffs";
 import NotFound from "./pages/NotFound";
+import { ThemeProvider } from './context/ThemeContext';
 
 // Set the document title
 document.title = "appt.ppl - Student Prep Kit Portal";
@@ -17,20 +18,22 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/study-materials" element={<StudyMaterials />} />
-          <Route path="/exam-dates" element={<ExamDates />} />
-          <Route path="/cutoffs" element={<Cutoffs />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-    <Analytics/>
+    <ThemeProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/study-materials" element={<StudyMaterials />} />
+            <Route path="/exam-dates" element={<ExamDates />} />
+            <Route path="/cutoffs" element={<Cutoffs />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </ThemeProvider>
+    <Analytics />
   </QueryClientProvider>
 );
 

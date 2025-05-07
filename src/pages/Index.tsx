@@ -1,4 +1,4 @@
-import { Linkedin, Youtube } from "lucide-react";
+import { HelpCircle, Info, LifeBuoy, Linkedin, Youtube } from "lucide-react";
 import { Book, Clock, LineChart, Download, Trophy } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -35,10 +35,10 @@ const Index = () => {
               icon={<Clock className="h-4 w-4 text-primary" />}
             />
             <StatsCard
-              title="NA"
-              value="NA"
-              subtitle="NA"
-              icon={<Youtube className="h-4 w-4 text-primary" />}
+              title="Aspirants helped"
+              value="120+"
+              subtitle="Resources, Weightage, and Cutoffs"
+              icon={<Info className="h-4 w-4 text-primary" />}
               buttonText="Visit"
               buttonLink=""
             />
@@ -81,7 +81,7 @@ const Index = () => {
         </div>
 
         {/* Quick Tips Section */}
-        <div className="mt-12 bg-white rounded-lg shadow-sm p-6">
+        <div className="bg-accent/50 p-4 rounded-md border border-accent mt-4">
           <h2 className="text-2xl font-bold mb-4">Quick Preparation Tips</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex items-start">
@@ -90,7 +90,7 @@ const Index = () => {
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-medium">Give Mock Tests</h3>
-                <p className="mt-1 text-gray-600">Attend them Mock tests, as you can learn time management.</p>
+                <p className="text-sm text-muted-foreground mt-1">Attend them Mock tests, as you can learn time management.</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -99,7 +99,7 @@ const Index = () => {
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-medium">Practice Previous Papers</h3>
-                <p className="mt-1 text-gray-600">Practice previous year questions (PYQs) and sample tests.</p>
+                <p className="text-sm text-muted-foreground mt-1">Practice previous year questions (PYQs) and sample tests.</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -108,7 +108,7 @@ const Index = () => {
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-medium">Lectures</h3>
-                <p className="mt-1 text-gray-600">Utilize Scalar’s YouTube playlists and Test Prep Serie.</p>
+                <p className="text-sm text-muted-foreground mt-1">Utilize Scalar’s YouTube playlists and Test Prep Serie.</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -117,7 +117,7 @@ const Index = () => {
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-medium">Extra Question</h3>
-                <p className="mt-1 text-gray-600">Use topic-specific resources like Arun Sharma for Mathematics and RS Aggarwal for Logical Reasoning.</p>
+                <p className="text-sm text-muted-foreground mt-1">Use topic-specific resources like Arun Sharma for Mathematics and RS Aggarwal for Logical Reasoning.</p>
               </div>
             </div>
           </div>
@@ -125,45 +125,49 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t mt-16 py-6">
+      <footer className="bg-card border-t mt-16 py-6">
         <div className="container px-4">
           <div className="text-center">
-            <h3 className="font-bold text-primary">appt.ppl</h3>
-            <p className="text-sm text-gray-500 mt-1">Helping students crack Scaler NSET.</p>
+            <h3 className="font-bold text-primary">Ace NSET</h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              Helping students crack Scaler NSET.
+            </p>
             {/* Contributors Box */}
-      <div className="mt-6 mx-auto max-w-md bg-muted rounded-2xl p-4 shadow-md">
-        <h4 className="text-md font-semibold text-foreground mb-2">Connect with Contributors</h4>
-        <div className="flex flex-col gap-3 items-start text-base">
-          
-          <a
-            href="https://www.linkedin.com/in/praneeth-budati-257391326/?originalSubdomain=in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-primary hover:underline"
-          >
-            <Linkedin size={18} /> Praneeth Budati
-          </a>
+            <div className="mt-6 mx-auto max-w-md bg-muted rounded-2xl p-4 shadow-md">
+              <h4 className="text-md font-semibold text-foreground mb-2">Connect with Contributors</h4>
+              <div className="flex flex-col gap-3 items-start text-base">
 
-          <a
-            href="https://www.linkedin.com/in/pranay-reddy-a3015a333/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-primary hover:underline"
-          >
-            <Linkedin size={18} /> Pranay Reddy
-          </a>
+                <a
+                  href="https://www.linkedin.com/in/praneeth-budati-257391326/?originalSubdomain=in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Linkedin size={18} /> Praneeth Budati
+                </a>
 
-          <a
-            href="https://www.linkedin.com/in/ananthadattaeranti/?originalSubdomain=in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-primary hover:underline"
-          >
-            <Linkedin size={18} /> Anantha
-          </a>
-        </div>
-      </div>
-            <p className="text-xs text-gray-400 mt-4">© {new Date().getFullYear()} appt.ppl. All rights reserved.</p>
+                <a
+                  href="https://www.linkedin.com/in/pranay-reddy-a3015a333/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Linkedin size={18} /> Pranay Reddy
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/ananthadattaeranti/?originalSubdomain=in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Linkedin size={18} /> Anantha
+                </a>
+              </div>
+            </div>
+            <p className="text-xs text-muted-foreground/70 mt-4">
+              © {new Date().getFullYear()} Ace NSET. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>

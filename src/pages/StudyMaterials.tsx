@@ -420,7 +420,7 @@ const StudyMaterials = () => {
       <footer className="bg-card border-t mt-16 py-6">
         <div className="container px-4">
           <div className="text-center">
-            <h3 className="font-bold text-primary">appt.ppl</h3>
+            <h3 className="font-bold text-primary">Ace NSET</h3>
             <p className="text-sm text-muted-foreground mt-1">
               Helping students crack Scaler NSET.
             </p>
@@ -458,7 +458,7 @@ const StudyMaterials = () => {
               </div>
             </div>
             <p className="text-xs text-muted-foreground/70 mt-4">
-              © {new Date().getFullYear()} appt.ppl. All rights reserved.
+              © {new Date().getFullYear()} Ace NSET. All rights reserved.
             </p>
           </div>
         </div>

@@ -19,12 +19,12 @@ const FeaturedCard = ({ title, description, icon, linkTo, badgeText }: FeaturedC
       <CardHeader className="bg-secondary/50 pb-2">
         <div className="flex items-center justify-between">
           <div className="rounded-full bg-primary/10 p-2">{icon}</div>
-          {badgeText && <Badge className="bg-accent">{badgeText}</Badge>}
+          {badgeText && <Badge className="">{badgeText}</Badge>}
         </div>
         <CardTitle className="text-xl mt-2">{title}</CardTitle>
       </CardHeader>
       <CardContent className="pt-4">
-        <CardDescription className="text-sm text-gray-600">{description}</CardDescription>
+        <CardDescription className="text-sm text-muted-foreground mt-1">{description}</CardDescription>
       </CardContent>
       <CardFooter className="border-t pt-4 pb-4">
         <Button variant="ghost" className="ml-auto group" asChild>
