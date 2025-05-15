@@ -65,7 +65,7 @@ const StudyMaterials = () => {
         id: 1,
         title: "Logical Reasoning 1",
         subject: "Logical Reasoning",
-        description: "Comprehensive textbook covering algebra",
+        description: "Complete guide to Logical Reasoning",
         type: "PDF",
         url: "https://drive.google.com/file/d/1ceCVEs-xQ6_Ngw5AbzRoHVCwFhx6EHcO/view?usp=sharing",
       },
@@ -73,7 +73,7 @@ const StudyMaterials = () => {
         id: 2,
         title: "Logical Reasoning 2",
         subject: "Logical Reasoning",
-        description: "Complete guide to mechanics, thermodynamics, and optics",
+        description: "Complete guide to Logical Reasoning",
         type: "PDF",
         url: "https://drive.google.com/file/d/1ExYbaCOqc8k9BL3pMf-4p4JAJt02kqe5/view?usp=sharing",
       },
@@ -81,7 +81,7 @@ const StudyMaterials = () => {
         id: 3,
         title: "Maths 1",
         subject: "Mathematics",
-        description: "In-depth coverage of organic chemistry concepts and reactions",
+        description: "In-depth coverage of concepts ",
         type: "PDF",
         url: "https://drive.google.com/file/d/1hOs_gqc0KntrJ3d5KztfJ1Ej-pI260la/view?usp=sharing",
       },
@@ -234,15 +234,16 @@ const StudyMaterials = () => {
           />
         </div>
 
-        <Tabs defaultValue="textbooks">
+        <Tabs defaultValue="syllabus">
           <TabsList className="grid grid-cols-4 mb-6">
-            <TabsTrigger value="textbooks" className="flex items-center gap-2">
-              <Book className="h-4 w-4" />
-              <span className="hidden sm:inline">Textbooks</span>
-            </TabsTrigger>
+            
             <TabsTrigger value="syllabus" className="flex items-center gap-2">
               <PenTool className="h-4 w-4" />
               <span className="hidden sm:inline">Topic Wise Weightage</span>
+            </TabsTrigger>
+            <TabsTrigger value="textbooks" className="flex items-center gap-2">
+              <Book className="h-4 w-4" />
+              <span className="hidden sm:inline">Textbooks</span>
             </TabsTrigger>
             <TabsTrigger value="videos" className="flex items-center gap-2">
               <Video className="h-4 w-4" />
@@ -420,7 +421,7 @@ const StudyMaterials = () => {
       <footer className="bg-card border-t mt-16 py-6">
         <div className="container px-4">
           <div className="text-center">
-            <h3 className="font-bold text-primary">Ace NSET</h3>
+            <h3 className="font-bold text-primary">appt.ppl</h3>
             <p className="text-sm text-muted-foreground mt-1">
               Helping students crack Scaler NSET.
             </p>
@@ -458,7 +459,7 @@ const StudyMaterials = () => {
               </div>
             </div>
             <p className="text-xs text-muted-foreground/70 mt-4">
-              © {new Date().getFullYear()} Ace NSET. All rights reserved.
+              © {new Date().getFullYear()} appt.ppl. All rights reserved.
             </p>
           </div>
         </div>
