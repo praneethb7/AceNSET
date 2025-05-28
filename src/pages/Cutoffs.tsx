@@ -44,11 +44,12 @@ const Cutoffs = () => {
       trend: "up",
       change: 2.4
     },
-    "June": {
-      score: "41%",
+    "May": {
+      score: "49%",
       trend: "up",
       change: 2.0
     }
+    
   };
 
   // Helper function to get trend icon
@@ -71,7 +72,7 @@ const Cutoffs = () => {
   };
 
   // Define the months to show
-  const months = ["January", "February", "March","April 26","April 27"];
+  const months = ["January", "February", "March","April 26","April 27", "May"];
 
   return (
     <div className="min-h-screen bg-background">
